@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style-form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Cadastro do Produto</title>
+</head>
+
+<body class="pag-form">
+    <div class="menu-superior">
+        <button onclick="window.location.href='index.html'">Página Inicial</button>
+        <button onclick="window.location.href='cadastro-cliente.html'">Cadastro de Cliente</button>
+        <button onclick="window.location.href='cadastro-vendedor.html'">Cadastro de Vendedor</button>
+    </div>
+    <div class="titulo-subtitulo">
+        <h1>Página do Vendedor</h1>
+        <h3 class="subtitulo">Adicione, altere ou exclua produtos da sua loja</h3>
+    </div>
+    <form method="post" id="form-produto">
+        <fieldset>
+            <legend>Adicionar novos produtos</legend>
+            <div class="texto-form">
+                <p>Nome do produto: <input type="text" name="nome-produto" id="campo-nome-produto"
+                        placeholder="Digite o nome do produto" required></p>
+                <p>Preço do produto: <input type="number" name="preço" id="campo-valor" step="0.01" placeholder="0,00"
+                        required>
+                </p>
+                <p>Prazo de entrega: <input type="number" name="entrega" id="campo-entrega"
+                        placeholder="Digite o prazo em dias" required></p>
+                <p>Foto do produto: <input type="file" name="foto" id="campo-foto"></p>
+                <p>Descrição: <textarea name="descricao" id="campo-descricao" cols="40" rows="3"
+                        placeholder="Escreva uma breve descrição do seu produto..." required></textarea></p>
+            </div>
+        </fieldset>
+
+        <button class="botao-enviar" type="submit">Finalizar Cadastro</button>
+
+        <fieldset>
+            <legend>Produtos na loja</legend>
+            <div>
+                <div class="switch-container vertical">
+                    <label class="botao-disponivel">
+                        <input type="checkbox" class="toggleSwitch" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span class="statusTexto">Produto no catálogo</span>
+                </div>
+                <img src="/img/produto1.jpg" alt="Fone de ouvido sem fio" height="150" width="150">
+                <h3>Fone De Ouvido Sem Fio</h3>
+                <p>Fone de ouvido sem fio bluetooth TWS-5.0 com LED</p>
+                <p>Preço: R$29,90</p>
+                <p>Prazo de entrega: 8 dias úteis</p>
+                <button class="alterar" data-id="1">Alterar</button>
+                <button class="delet">Deletar</button>
+            </div>
+            <div>
+                <div class="switch-container vertical">
+                    <label class="botao-disponivel">
+                        <input type="checkbox" class="toggleSwitch">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="statusTexto">Produto fora do catálogo</span>
+                </div>
+                <img src="/img/produto2.jpg" alt="Teclado gamer" height="150" width="150">
+                <h3>Teclado Gamer</h3>
+                <p>Teclado gamer semi mecânico superfície metal warrior Tc210</p>
+                <p>Preço: R$188,60</p>
+                <p>Prazo de entrega: 8 dias úteis</p>
+                <button class="alterar" data-id="2">Alterar</button>
+                <button class="delet">Deletar</button>
+            </div>
+            <div>
+                <div class="switch-container vertical">
+                    <label class="botao-disponivel">
+                        <input type="checkbox" class="toggleSwitch" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span class="statusTexto">Produto no catálogo</span>
+                </div>
+                <img src="/img/produto3.webp" alt="" height="150" width="150">
+                <h3>Xiaomi Redmi Note 13 Pro 4g</h3>
+                <p>Smartphone Xiaomi Redmi note 13 pro 4g, 8gb Ram, 256gb, dual sim, cor preto.</p>
+                <p>Preço: R$ 1.644,68</p>
+                <p>Prazo de entrega: 10 dias úteis</p>
+                <button class="alterar" data-id="3">Alterar</button>
+                <button class="delet">Deletar</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <script src="script.js"></script>
+    <script src="script-produto.js"></script>
+</body>
+
+</html>

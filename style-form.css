@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+body.pag-form {
+  background-color: #f5f5f5;
+  padding: 20px 10px;
+}
+
+.menu-superior {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  background-color: #ffe600;
+  padding: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.menu-superior button {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-superior button:hover {
+  background-color: #f0f0f0;
+}
+
+.titulo-subtitulo {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.titulo-subtitulo h1 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.titulo-subtitulo .subtitulo {
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 400;
+}
+
+form#form-produto,
+form#form-cadastro,
+form#cadastro {
+  background-color: white;
+  max-width: 720px;
+  margin: 0 auto 40px;
+  padding: 30px 30px 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 28px;
+  padding: 22px 25px;
+}
+
+legend {
+  font-weight: 700;
+  color: #222;
+  padding: 0 12px;
+  font-size: 1.2rem;
+}
+
+.texto-form p,
+form#cadastro > fieldset > p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #444;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  color: #333;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.botao-enviar {
+  display: block;
+  width: 220px;
+  margin: 20px auto 0 auto;
+  padding: 14px 0;
+  background-color: #ffe600;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 230, 0, 0.8);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao-enviar:hover {
+  background-color: #ffdd00;
+  box-shadow: 0 4px 12px rgba(255, 221, 0, 0.9);
+}
+
+form#form-produto fieldset > div {
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+form#form-produto img {
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+form#form-produto h3 {
+  margin: 12px 0 6px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+form#form-produto p {
+  margin: 4px 0;
+  color: #444;
+}
+
+button {
+  background-color: #ffe600;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-weight: 700;
+  margin-right: 10px;
+  margin-top: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+  color: #333;
+}
+
+button:hover {
+  background-color: #ffdd00;
+}
+
+button.delet {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+button.delet:hover {
+  background-color: #e60000;
+}
+
+
+
+.botao-disponivel {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.botao-disponivel input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 22px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px; 
+  width: 16px;
+  left: 3px; 
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #28a745;
+}
+
+input:checked + .slider::before {
+  transform: translateX(18px);
+}

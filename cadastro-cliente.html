@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style-form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Cadastro do Cliente</title>
+</head>
+
+<body class="pag-form">
+    <div class="menu-superior">
+        <button onclick="window.location.href='index.html'">Página Inicial</button>
+        <button onclick="window.location.href='cadastro-vendedor.html'">Cadastro de Vendedor</button>
+        <button onclick="window.location.href='cadastro-produto.html'">Editar Produtos</button>
+    </div>
+    <div class="titulo-subtitulo">
+        <h1>Cadastro do úsuario</h1>
+        <h3 class="subtitulo">Preencha corretamente todas as informações para seguir com o cadastro</h3>
+    </div>
+    <form method="post" id="form-cadastro">
+        <fieldset id="dados-pessoais">
+            <legend>Dados do Cliente</legend>
+            <div class="texto-form">
+                <p>Nome: <input type="text" name="nome" id="campo-nome" size="30" placeholder="Digite seu nome completo"
+                        required>
+                </p>
+                <p>CPF: <input type="text" name="cpf" id="campo-cpf" size="14" minlength="11" maxlength="11"
+                        placeholder="xxx.xxx.xxx-xx" required></p>
+                <p>Telefone: <input type="tel" name="telefone" id="campo-telefone" placeholder="(DDD) XXXXX-XXXX"
+                        required></p>
+                <p>CEP: <input type="text" id="cep" name="cep" maxlength="9" placeholder="xxxxx-xxx"></p>
+                <p>Estado: <input type="text" id="estado" name="estado" readonly></p>
+                <p>Cidade: <input type="text" id="cidade" name="cidade" readonly></p>
+                <p>Bairro: <input type="text" id="bairro" name="bairro" readonly></p>
+                <p>Rua: <input type="text" id="rua" name="rua"></p>
+            </div>
+        </fieldset>
+        <fieldset id="dados-login">
+            <legend>Informações Para Login</legend>
+            <div class="texto-form">
+                <p>E-mail: <input type="email" name="area-email" id="campo-email" size="30"
+                        placeholder="Digite seu e-mail" required>
+                </p>
+                <p>Senha: <input type="password" name="senha" id="campo-senha" placeholder="Crie uma senha" required>
+                </p>
+                <p>Confirmar Senha: <input type="password" name="senha" id="campo-confirme-senha"
+                        placeholder="Digite a senha sem alterações" required>
+                </p>
+            </div>
+        </fieldset>
+        <button class="botao-enviar" type="submit">Finalizar Cadastro</button>
+    </form>
+
+
+
+    <script src="script-endereco.js"></script>
+</body>
+
+</html>
